@@ -1,4 +1,4 @@
-function SimpleCounter() {
+function SimpleCounter(props) {
     return (
         <>
             <div className="counter-display">
@@ -8,10 +8,10 @@ function SimpleCounter() {
                         <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
                     </svg>
                 </div>
-                <div className="seg miles">0</div>
-                <div className="seg cientos"> 0</div>
-                <div className="seg decena"> 0</div>
-                <div className="seg unitarios">0</div>
+                <div className="seg miles">{props.miles}</div>
+                <div className="seg cientos"> {props.centena}</div>
+                <div className="seg decena"> {props.decena}</div>
+                <div className="seg unitarios">{props.unitarios}</div>
             </div>
         </>
     );
